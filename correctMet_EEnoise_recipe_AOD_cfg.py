@@ -54,14 +54,15 @@ process.load("PhysicsTools.PatAlgos.selectionLayer1.selectedPatCandidates_cff")
 process.load("PhysicsTools.PatAlgos.cleaningLayer1.cleanPatCandidates_cff")
 
 from PhysicsTools.PatAlgos.cleaningLayer1.jetCleaner_cfi import cleanPatJets
+
 process.jetsNoEENoise = cleanPatJets.clone(
     src = cms.InputTag("patJets"),
-    preselections = cms.string('pt > 50 || abs(eta) < 2.65 || abs(eta) > 3.139'),
+    finalCut = cms.string('pt > 50 || abs(eta) < 2.65 || abs(eta) > 3.139'),
    )
 
 process.jetsEENoise = cleanPatJets.clone(
     src = cms.InputTag("patJets"),
-    preselections = cms.string('pt < 50 && abs(eta) > 2.65 && abs(eta) < 3.139')
+    finalCut = cms.string('pt < 50 && abs(eta) > 2.65 && abs(eta) < 3.139')
 )
 
 process.pfcandidateClustered = cms.EDProducer(
