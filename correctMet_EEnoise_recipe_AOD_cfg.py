@@ -7,7 +7,8 @@ import FWCore.ParameterSet.VarParsing as VarParsing
 options = VarParsing.VarParsing('analysis')
 #options.inputFiles = '/store/mc/RunIISpring18DRPremix/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/AODSIM/100X_upgrade2018_realistic_v10-v1/70000/FEDCEFC1-8224-E811-9B1B-A0369F8363BE.root'
 #options.inputFiles = '/store/mc/RunIISummer18DRPremix/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/AODSIM/101X_upgrade2018_realistic_v7-v2/80000/F28F6278-3173-E811-821F-0CC47A7E6B00.root'
-options.inputFiles = 'file:CC7A350F-E29D-E811-B440-FA163EBC74D7.root'
+#options.inputFiles = 'file:CC7A350F-E29D-E811-B440-FA163EBC74D7.root'
+options.inputFiles = '/store/mc/RunIIFall17DRPremix/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/AODSIM/PU2017_94X_mc2017_realistic_v11-v1/40000/B2029913-168A-E811-B0A2-44A842CFD619.root'
 options.outputFile = 'corrMet_AOD.root'
 options.maxEvents  = 100
 options.parseArguments()
